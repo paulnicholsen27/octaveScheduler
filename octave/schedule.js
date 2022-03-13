@@ -1,21 +1,19 @@
-
-
 function getAvailableTimes(data) {
+
     let calendar = makeBusyCalendar(data["events"])
     let available_meeting_times = []
-    console.log(getDateArray())
     for (const day of getDateArray()) {
-        console.log(day)
         if (calendar.hasOwnProperty(day)) {
             available_meeting_times.push({day: day, times: findOpenSlots(calendar[day])})
         } else {
             available_meeting_times.push({ day: day, times: [{ start: '09:00:00', end: '17:00:00' }] })
         }
     }
-    console.log(available_meeting_times)
+    return available_meeting_times
 }
 
 var getDateArray = function () {
+    // returns array of all dates in given year formatted as "YYYY-MM-DD"
 
     let dates = new Array()
     let dt = new Date("2022-01-01");
@@ -29,7 +27,7 @@ var getDateArray = function () {
 }
 
 function findOpenSlots(day, length=30) {
-
+    // returns array of all time blocks on a given day greater than length parameter (minutes)
     let open_spots = []
     let meeting_duration = length * 60 * 1000 //convert minutes to milliseconds
     let start_time = "09:00:00"
@@ -60,6 +58,7 @@ function getTimeFromHours(time_string) {
 }
 
 function makeBusyCalendar(events) {
+    // returns object with datestrings as keys and array of objects of busy times in the format of {start: "HH:MM:SS", end: "HH:MM:SS"}
     let calendar = {}
 
     events.forEach(function(event) {
@@ -90,7 +89,6 @@ function makeBusyCalendar(events) {
     for (const day in calendar) {
         calendar[day].sort( (a, b) => getTimeFromHours(a.start) - getTimeFromHours(b.start))
     }
-    // console.log(calendar)
     return calendar
 }
 
