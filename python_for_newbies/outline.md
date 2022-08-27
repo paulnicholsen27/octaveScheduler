@@ -16,9 +16,9 @@ Running a Program
 	- comments (VS Code shortcut)
 	- print ("I love Python")
 	- Activity: print("Hello World") 
-	- Tip:  Take a screen shot and share it to the world! You are a programmer!  You are one who programs!
 
 You're a Programmer!
+	- Review last exercise
     - you have programmed
     - take a screen shot
 
@@ -30,7 +30,7 @@ The Zen of Python
 Numbers
     - integers vs float
     - type()
-    - +-*/ **
+    - +-*/ // **
     - modulo
     - parentheses 
     - float(int) & int(float) - casting
@@ -41,8 +41,12 @@ Intro to Variables
 	- declare/initialize a variable
 	- dynamically typed
 	- assignment operator (=)
+	- foo / bar / baz
+
+Variable best practices
 	- PEP8: lowercase, snake_case
 	- use clear names - PEP8: Readability counts
+	- https://betterprogramming.pub/all-33-reserved-keywords-in-python-98e55f6c8ded
 
 Working with Variables
 	- demo math with variables
@@ -51,11 +55,18 @@ Working with Variables
 		- x = x + 1
     - avoid hardcoding
 
+Exercise:  Working with variables
+
+Exercise Review
+	- definition and dangers of hardcoding
+
 Understanding Error Messages
 	- NameError
 		- reading stack traces
+	- Syntax Error
 
-Activity: Converter (metric?  temperature?)
+
+<!-- Activity: Converter (metric?  temperature?) -->
 
 
 
@@ -74,6 +85,7 @@ Useful String Methods
 	- useful methods
 		- define method
 		- .lower, .upper, .capitalize, .title, .strip
+		- NoMethodError
 	- Google how to find the length of a string
 	- Activity:  Count number of letters
 
@@ -97,22 +109,30 @@ String Slicing and Indexing
 # Boolean
 
 Intro to Booleans
-	- True / False
+	- True / False (capitalization matters)
 	- Simple but fundamental for logic
     - type(True)
 
+Compound Expressions
+	- truth tables
+	- not
+	- and
+	- or
+	- parentheses, order of operations
+
 Comparison Operators
 	- comparison operators, >, <, <=, >=, ==, !=
+	- 5 < x < 6
 
 Truthy/Falsey
-	- many statements "evaluate" to T/F (truthy/falsy)
+	- many statements "evaluate" to T/F (truth`y`/falsy)
 		- bool(""), bool("something"), bool(None), bool(0), bool(5)
 	- math and strings
 
 # Functions
 Intro to Functions
 	- repeated chunks of code - DRY
-	- defined by indentation
+	- defined by indentation (tabs vs spaces)
 	- Vocab:  Calling a function.  Show what it looks like without parentheses
 	- demo hello_world function
 
@@ -128,7 +148,7 @@ Return statement
     - expand area of rectangle from last module to calculate cost of carpeting.  Need to return the area
     - different than print
     - can assign to variables 
-    - 
+    - how to print the return
 
 Default and Keyword Arguments
     - default arguments
@@ -145,16 +165,17 @@ Default and Keyword Arguments
 		- CHALLENGE:  Capitalize arguments correctly
 
 	- scope
-Logic
-Not
-	- review truthy/ falsy
 
-And / or 
-	Truth tables
-	parenthesis for grouping
+## Logic
+
+Review
+	- review truthy/ falsy
+	- Not/ And / or 
+		Truth tables
 
 If / else
-	- if / else
+	- if
+	- if
 		- else is not required
 	- indentation matters
 	- elif
@@ -167,9 +188,9 @@ while
 		do something
 	break out of endless loop
 	
-	```
+	```py
 	favorite_animal = ""
-favorite_animal = user_input("What is the best animal?")
+	favorite_animal = user_input("What is the best animal?")
 	while favorite_animal != "cat":
 		favorite_animal = user_input("That is incorrect.  Please try again ")
 	```
@@ -187,21 +208,30 @@ Data Structures
 
 Lists
 - aka arrays (technically different)
+- empty list
 - can contain multiple data types
 - can contain other lists
+
+
 - retrieving elements by index
 - setting elements by index
 - negative indexes
+
 - append / insert 
 - remove
 - slicing
 - len
 - in / not-in
-- Activity:  Build a guest list
+
+
+- Logic with lists
+	- bool([])
+	- if []
 
 - iterable
 - for… in
 
+- Activity:  Build a guest list
 - Activity:  Greet your guests
 
 - list comprehensions
@@ -210,11 +240,15 @@ Tuples
 	- like lists except immutable
 
 Dictionaries
+
 	- key / value pairs
 	- keys must be immutable (usually strings) and unique
 	- values can be anything and repeated
 		- including lists and other dicts
+
+	- setting values
 	- retrieving values
+
 	- .keys, .values, .items, 
 		- iterable
 		- items is a tuple
@@ -228,3 +262,4 @@ Dictionaries
 
 Final Activities
 	- Password generator
+	- Hangman

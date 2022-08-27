@@ -1,5 +1,3 @@
-def foo(bar, baz):
-    print(f"Bar: {bar}")
-    print(f"Baz: {baz}")
+import sys
 
-foo(baz="bar", bar="baz")
+#print(authors)
