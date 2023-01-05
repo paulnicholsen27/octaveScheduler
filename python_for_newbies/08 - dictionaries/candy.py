@@ -38,12 +38,19 @@ candies = [
 
 ]
 
-ing = {}
-for candy in candies:
-    for ingredient in candy["ingredients"]:
-        x = ing.get(ingredient, [])
-        x.append(candy["name"])
-        ing[ingredient] = x
-        # print(ing)
-        # print(ing.get(ingredient, []))
-print(ing)
+
+def sort_by_ingredient(candy_bars):
+    # returns a dictionary with ingredients as keys
+    # and lists of candy bars containing that ingredient as values
+    ing = {}
+    for candy in candies:
+        for ingredient in candy["ingredients"]:
+            x = ing.get(ingredient, [])
+            x.append(candy["name"])
+            ing[ingredient] = x
+    return ing
+
+print(sort_by_ingredient(candies))
+
+
+

@@ -234,7 +234,10 @@ Lists
 - Activity:  Build a guest list
 - Activity:  Greet your guests
 
-- list comprehensions
+List comprehensions
+	- "Syntactic sugar"
+	- [blah for blah in blah]
+	- [blah for blah in blah if blah]
 
 Tuples
 	- like lists except immutable
@@ -252,13 +255,38 @@ Dictionaries
 	- .keys, .values, .items, 
 		- iterable
 		- items is a tuple
-	- not indexable --- unordered
+	- ordered in Python 3.7 up
 	- key in dict / dict.keys
 	- value in dict.values
 
 	- Activity:  Build a shopping list
 		- item / quantity
 		- show .get in review
+
+	- Nested Dictionaries
+
+- Other data collections
+	- tuples
+		- ordered
+		- immutable
+
+	- sets
+		- unordered
+		- immutable
+			- can add or remove items
+				.add()
+					- can accept lists
+				.remove() / .discard
+		- union, intersection
+			<!-- https://www.programiz.com/python-programming/set -->
+
+		- no dupes
+
+	<!-- 
+		List is a collection which is ordered and changeable. Allows duplicate members.
+	Tuple is a collection which is ordered and unchangeable. Allows duplicate members.
+	Set is a collection which is unordered, unchangeable*, and unindexed. No duplicate members.
+	Dictionary is a collection which is ordered** and changeable. No duplicate members. -->
 
 Final Activities
 	- Password generator

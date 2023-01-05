@@ -1,12 +1,12 @@
-# In your editor, initialize a variable to any integer you choose.
+# Initialize a variable to any integer you choose.
 
-# Add 4 to that integer
+# Add 4 to your number and save the result in a new variable.
 
-# Multiply that sum by 2
+# Update that variable by multiplying it by 2
 
-# Add 6 to that product
+# Add 6
 
-# Divide that sum by 2
+# Divide by 2
 
 # Subtract your original number
 
