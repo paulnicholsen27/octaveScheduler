@@ -5,5 +5,6 @@ def my_func():
 
     x = x.title()
     y = y.title()
+    return(x, y)
 
 my_func()

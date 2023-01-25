@@ -26,10 +26,5 @@ sk = {
     ]
 }
 
-longest_title = None
-longest_pages = 0 
-for book in sk["books"]:
-    if book["page_length"] > longest_pages:
-        longest_pages = book["page_length"]
-        longest_title = book["title"]
-print(longest_title)
+# Iterate through the dictionary above and print the title
+# of the book with the most pages

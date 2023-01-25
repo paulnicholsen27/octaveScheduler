@@ -5,16 +5,20 @@ Welcome to the course
 	- structure of the course
 		- emphasize importance of doing activities -- can't learn to swim w/o getting in the water
 
-
 Installing Python
-	- set up VSCode
+	- Windows doc already bookmarked
 	- terminal
 	- python interpreter vs running a whole program
 
+Installing a Code Editor
+	- set up VSCode
+
+Running Your First Program
+	- students will download first_program.py and run in their own IDE
 
 Running a Program
 	- comments (VS Code shortcut)
-	- print ("I love Python")
+	- print("I love Python")
 	- Activity: print("Hello World") 
 
 You're a Programmer!
@@ -27,14 +31,15 @@ The Zen of Python
 
 # DataTypes
 
-Numbers
+Numbers and math
     - integers vs float
     - type()
     - +-*/ // **
     - modulo
     - parentheses 
     - float(int) & int(float) - casting
-    - Quiz	
+
+Quiz	
 
 Intro to Variables
 	- name and values
@@ -53,7 +58,7 @@ Working with Variables
 	- can set with expression
 		- centimeters = inches * 2.54 (better than c = i *2.54)
 		- x = x + 1
-    - avoid hardcoding
+    - avoid hardcoding (e.g., what if you needed to change 2.54 throughout your code to 2.45xxxx?)
 
 Exercise:  Working with variables
 
@@ -86,25 +91,24 @@ Useful String Methods
 		- define method
 		- .lower, .upper, .capitalize, .title, .strip
 		- NoMethodError
-	- Google how to find the length of a string
-	- Activity:  Count number of letters
 
 How to Google
+	- Google how to find the length of a string
 
 Counting Your E's Review
-
-Getting User Input
-	- getting user input
-
-Build Your Dream Cat
-	- Demo Build Your Dream Cat (get user input of cat attributes, format string response)
-	- Some extension on their own
+	- Activity:  Count number of letters
 
 String Slicing and Indexing
 	- string indexing
 		- start at 0
 		- negative index
 		- x.index vs x.find
+
+Getting User Input
+	- getting user input
+	- Demo Build Your Dream Cat (get user input of cat attributes, format string response)
+	- Some extension on their own
+
 
 # Boolean
 
@@ -127,11 +131,11 @@ Comparison Operators
 Truthy/Falsey
 	- many statements "evaluate" to T/F (truth`y`/falsy)
 		- bool(""), bool("something"), bool(None), bool(0), bool(5)
-	- math and strings
+	- math and strings (i.e., string multiplication "hi" * 3)
 
 # Functions
 Intro to Functions
-	- repeated chunks of code - DRY
+	- repeated chunks of code - DRY (build pseudocode version of upper(string) or similar)
 	- defined by indentation (tabs vs spaces)
 	- Vocab:  Calling a function.  Show what it looks like without parentheses
 	- demo hello_world function
@@ -142,7 +146,7 @@ Arguments and Parameters
         - order matters
     - Demo: Area of Rectangle
 
-ACTIVITY:  HEY GRANDPA
+ACTIVITY:  HEY KIDS
 
 Return statement
     - expand area of rectangle from last module to calculate cost of carpeting.  Need to return the area
@@ -150,21 +154,26 @@ Return statement
     - can assign to variables 
     - how to print the return
 
-Default and Keyword Arguments
-    - default arguments
-
 	- ACTIVITY: Calculator
 
-	- ACTIVITY:  String formatting extension; get user input, return and store as variable.  Break this up so first student tasks are just getting user inputs and returning value
-	
+Default and Keyword Arguments
+    - default arguments
 	- default parameters
-	- ACTIVITY
+	- ACTIVITY - Ice Cream Shop
+
+
+Function Best Practices
+	- DRY
+	- Do one thing
+
+	<!-- - ACTIVITY:  String formatting extension; get user input, return and store as variable.  Break this up so first student tasks are just getting user inputs and returning value
+	
 
 	- keyword arguments
 		- ACTIVITY: STRING FORMATTING
 		- CHALLENGE:  Capitalize arguments correctly
 
-	- scope
+	- scope -->
 
 ## Logic
 
@@ -178,7 +187,10 @@ If / else
 	- if
 		- else is not required
 	- indentation matters
-	- elif
+
+Coding Exercise:  Build a Bouncer
+
+Elif
 
 Activity:    FizzBuzz.  Remind about modulo operator (Just do as a function operating on one int here because for..in and arrays not yet introduced
 
@@ -186,10 +198,10 @@ while
 	things = 0
 	while things < 10:
 		do something
+
 	break out of endless loop
 	
 	```py
-	favorite_animal = ""
 	favorite_animal = user_input("What is the best animal?")
 	while favorite_animal != "cat":
 		favorite_animal = user_input("That is incorrect.  Please try again ")
@@ -225,33 +237,50 @@ Lists
 
 
 - Logic with lists
+	- go over quiz #5
+	```py
+	def check_if_cute(animal):
+     baby_animals = ["puppy", "kitten", "piglet", "duckling"]
+     if animal in baby_animals:
+          return True
+     else:
+          return False
+	```
+		- better to write `return animal in baby_animals`
 	- bool([])
 	- if []
 
-- iterable
-- for… in
+- Iteration
 
-- Activity:  Build a guest list
-- Activity:  Greet your guests
+	- iterable
+	- for… in
+
+- Activity:  Build a guest list (remind how to break out of infinite loop)
+- Activity:  Show Guest List
+- Activity: Remove a Guest
+- Activity:  Build a CLI
 
 List comprehensions
 	- "Syntactic sugar"
 	- [blah for blah in blah]
 	- [blah for blah in blah if blah]
 
-Tuples
-	- like lists except immutable
+
 
 Dictionaries
 
+Definitions
 	- key / value pairs
 	- keys must be immutable (usually strings) and unique
 	- values can be anything and repeated
 		- including lists and other dicts
 
+Getting and setting Dictionary Items
 	- setting values
 	- retrieving values
+	- .get
 
+Iterating Through Dictionaries
 	- .keys, .values, .items, 
 		- iterable
 		- items is a tuple
@@ -264,6 +293,8 @@ Dictionaries
 		- show .get in review
 
 	- Nested Dictionaries
+
+	- Activity: Sorting chocolate bars
 
 - Other data collections
 	- tuples

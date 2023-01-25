@@ -2,10 +2,13 @@ word_list = ["rectangle", "ulterior", "altruism", "carriage", "betrayal", "ennui
 vowels = ["a", "e", "i", "o", "u"]
 
 def first_letter(words):
+    starts_with_vowel = []
+    starts_with_consonant = []
     for word in words:
         if word[0] in vowels:
-            print(f"{word} starts with a vowel")
+            starts_with_vowel.append(word)
         else:
-            print(f"{word} starts with a consonant")
+            starts_with_consonant.append(word)
+    return starts_with_vowel, starts_with_consonant
 
-first_letter(word_list)
+print(first_letter(word_list))

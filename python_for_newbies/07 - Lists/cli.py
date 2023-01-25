@@ -24,11 +24,16 @@ def show_guest_list():
 
 while True:
     print("""
+        
+        *********************
         1.  Show all guests
         2.  Add a guest
         3.  Remove a guest
         4.  Exit
+        *********************
+
         """)
+        
     user_choice = input("Choose the number that indicates your choice: ")
     if user_choice == "1":
         show_guest_list()
@@ -36,6 +41,8 @@ while True:
         add_to_guest_list()
     elif user_choice == "3":
         remove_from_guest_list()
-    else:
+    elif user_choice == "4":
         print("Goodbye!")
         break
+    else:
+        print("Please enter a number from 1-4.")
