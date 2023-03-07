@@ -1,0 +1,48 @@
+<!-- <div id="active-users">My Div</div>
+
+<script>
+  // Load the Google Analytics API client library
+
+  gapi.load('client', function() {
+    gapi.client.init({
+      apiKey: 'AIzaSyAPoeIKwz19bT8GQ47YdrH4nbosssbZ9g4',
+      discoveryDocs: ['https://analyticsreporting.googleapis.com/$discovery/rest']
+    }).then(function() {
+      gapi.client.analytics.data.realtime.get({
+        ids: 'ga:259777198',
+        metrics: 'rt:activeUsers'
+      }).then(function(response) {
+        var activeUsers = response.result.totalsForAllResults['rt:activeUsers'];
+        document.getElementById('active-users').innerHTML = 'Active users: ' + activeUsers;
+      });
+    });
+  });
+  console.log("hello")
+</script> -->
+
+
+<div id="active-users"></div>
+<script src="https://apis.google.com/js/client.js"></script>
+<script src="https://apis.google.com/js/platform.js" async defer></script>
+<meta name="google-signin-client_id" content="{SERVICE_CLIENT_ID}.apps.googleusercontent.com">
+
+<script>
+  // Load the Google Analytics API client library
+  gapi.load('client', function () {
+    gapi.client.init({
+      client_id: '{SERVICE_CLIENT_ID}',
+      apiKey: '{API_KEY}'
+    }).then(function () {
+      gapi.client.request({
+        path: '/v1/data/realtime:get',
+        params: {
+          ids: 'GA4:{PROPERTY_ID}',
+          metrics: 'rt:activeUsers'
+        }
+      }).then(function (response) {
+        var activeUsers = response.result.totalsForAllResults['rt:activeUsers'];
+        document.getElementById('active-users').innerHTML = 'Active users: ' + activeUsers;
+      });
+    });
+  });
+</script>

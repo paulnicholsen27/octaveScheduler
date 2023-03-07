@@ -1,12 +1,12 @@
+number = int(input("Enter an integer: "))
 
-# Python program to demonstrate working
-# of map.
-  
-# Return double of n
-def addition(n):
-    return n + n
-  
-# We double all numbers using map()
-numbers = (1, 2, 3, 4)
-result = map(addition, numbers)
-print(result)
+i = 1
+
+total = 0
+
+while i <= number:
+    if i % 2 == number % 2:
+        total = total + i
+    i += 1
+
+print(total)

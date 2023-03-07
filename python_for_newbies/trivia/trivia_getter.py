@@ -1,10 +1,10 @@
-import requests
+import apis.jokes as jokes
 import json 
 
 questions = []
 
 for _ in range(5):
-    req = requests.get("https://opentdb.com/api.php?amount=50")
+    req = jokes.get("https://opentdb.com/api.php?amount=50")
     questions += req.json()["results"]
 
 print(len(questions)

@@ -257,7 +257,7 @@ Lists
 
 - Activity:  Build a guest list (remind how to break out of infinite loop)
 - Activity:  Show Guest List
-- Activity: Remove a Guest
+- Activity:  Remove a Guest
 - Activity:  Build a CLI
 
 List comprehensions
@@ -318,6 +318,36 @@ Iterating Through Dictionaries
 	Tuple is a collection which is ordered and unchangeable. Allows duplicate members.
 	Set is a collection which is unordered, unchangeable*, and unindexed. No duplicate members.
 	Dictionary is a collection which is ordered** and changeable. No duplicate members. -->
+
+- Debugging
+	- Try/Except
+		- Zero Division Error
+	- PDB
+		- help (h)
+		- next
+		- continue
+		- list
+		- step
+	- Activity: sum_of_evens
+	- Activity: longest_word
+
+
+- Working with APIs - https://mixedanalytics.com/blog/list-actually-free-open-no-auth-needed-apis/
+	- What is an API?
+		- remote control
+			- standards help (play button is a triangle)
+	- mail-order store analogy
+	- Request / Response cycle
+		- client / server
+		- response status codes
+	- JSON
+	- view source
+	- Postman
+		- endpoint
+	- requests library
+<!-- https://www.boredapi.com/documentation -->
+
+
 
 Final Activities
 	- Password generator
