@@ -13,7 +13,6 @@ def roll_dice(number_of_sides, number_of_rolls):
     rolls_so_far = 0
     while rolls_so_far < num_rolls:
         sum += randint(1, number_of_sides)
-        print(sum)
         rolls_so_far += 1
     return sum
 

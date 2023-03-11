@@ -341,11 +341,15 @@ Iterating Through Dictionaries
 		- client / server
 		- response status codes
 	- JSON
+		- install json viewer
 	- view source
 	- Postman
 		- endpoint
 	- requests library
-<!-- https://www.boredapi.com/documentation -->
+	- boredapi activity
+		<!-- https://www.boredapi.com/documentation -->
+	- cocktailapi activity
+		- schema error with requests unless http(s): is added as a url schema
 
 
 
